@@ -1,15 +1,16 @@
 ﻿// Node.js entry point
+var log = require('logger')(module);
 var User = require('./user');
-var db = require('./db');
+var db = require('db');
 db.connect();
 
 function run() {
     var vasya = new User('Вася');
-    var petya = new User('Petya');
+    var petya = new User('Петя');
 
     vasya.hello(petya);
 
-    console.log(db.getPhrase('Run successful'));
+    log(db.getPhrase('Run successful'));
 
     require('readline')
    .createInterface(process.stdin, process.stdout)

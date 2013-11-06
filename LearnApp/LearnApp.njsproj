@@ -22,10 +22,13 @@
     <Content Include="app.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="db\index.js">
+    <Content Include="node_modules\db\index.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="db\ru.json">
+    <Content Include="node_modules\db\ru.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="node_modules\logger\index.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="server.js" />
@@ -34,7 +37,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="db" />
+    <Folder Include="node_modules" />
+    <Folder Include="node_modules\db" />
+    <Folder Include="node_modules\logger" />
     <Folder Include="user" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
