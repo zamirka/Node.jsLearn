@@ -4,10 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ProjectGuid>71ea1082-1aef-471c-a257-bca0788ccc81</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>app.js</StartupFile>
     <ProjectTypeGuids>{262852C6-CD72-467D-83FE-5EEB1973A190};{F48CDB0C-A733-4163-8884-DCAA07CF69BF}</ProjectTypeGuids>
     <Name>LearnApp</Name>
     <RootNamespace>LearnApp</RootNamespace>
+    <DebuggerPort>5858</DebuggerPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,7 +19,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="user\ru.json">
+    <Content Include="app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="db\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="db\ru.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="server.js" />
@@ -27,6 +34,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="db" />
     <Folder Include="user" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
